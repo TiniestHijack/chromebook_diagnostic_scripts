@@ -4,8 +4,8 @@ Some keystroke mimicking scripts for Arduino IDE that run general diagnostics on
 # Basic Instructions
 1. Download as zip or clone the repository
 2. Insert the Chrome_Key_Coms folder into the **Documents/Arduino/libraries** directory on your computer
-3. Open the diagnostic.ino folder of your choice in the diagnostic folder with Arduino IDE
-4. Plug in your board (I used a pro micro) and upload the code. Make sure you pick the right COM port!
+3. Open the diagnostic folder and diagnostic.ino file of your choice.
+4. Plug in your board (I used a pro micro) and upload the code using the upload button on the to menu bar. Make sure you pick the right COM port in Tools/Port!
 5. After uploading, turn on your chromebook and select the add user button. Confirm the cursor is blinking in the enter username box and plug in your board, then just let it run!
 
 # Code Context
@@ -14,7 +14,7 @@ You will likely have to make changes to some of the delays and commands dependin
 This diagnostic tool assumes your are a system administrator logging into your account to troubleshoot a malfunctioning student or worker computer.
 
 # Troubleshooting
-The code should be easily understood, most of the key combinations are in the Chrome_Key_Coms library in the .cpp file. If you need a reference for key commands then check out the Arduino Keyboard and Mouse libraries. 
+The code should be easily understood, most of the key combinations are in the Chrome_Key_Coms library in the .cpp file. If you need a reference for key commands then check out the Arduino Keyboard and Mouse libraries. If you have a different version than those listed, you could easily adjust the timing and actions in the Chrome_Key_Coms library to fit your OS with a little trial and error.
 
 Some basic key commands can be found here: https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/
 

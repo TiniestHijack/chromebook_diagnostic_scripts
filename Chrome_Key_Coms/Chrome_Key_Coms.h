@@ -11,7 +11,7 @@ void openCrosh();
 
 void batteryTest();
 
-void testCamera();
+void testCamera(int openGal, int waitGal, int toPlay);
 
 void powerwash();
 
@@ -19,7 +19,7 @@ void powerwashConfOld();
 
 void networkSelect();
 
-void acceptTerms();
+void acceptTerms(int count);
 
 void finishPowerwash();
 

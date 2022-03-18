@@ -28,7 +28,7 @@ void openCrosh() {
   Keyboard.press(KEY_LEFT_ALT);
   Keyboard.press('t');
   Keyboard.releaseAll();
-  delay(10000);
+  delay(15000);
 }
 
 void batteryTest() {
@@ -37,7 +37,7 @@ void batteryTest() {
   delay(10000); //wait for user to view 
 }
 
-void testCamera() {
+void testCamera(int openGal, int waitGal, int toPlay) {
   //open camera app
   Keyboard.write(KEY_LEFT_GUI); //search key
   delay(2000);
@@ -56,14 +56,13 @@ void testCamera() {
   Keyboard.write(KEY_RETURN);
   delay(5000); //time to make a noise!
   Keyboard.write(KEY_RETURN);
-  delay(8000);
+  delay(waitGal);
 
   //view recording
-  Keyboard.write(KEY_TAB);
-  delay(1000);
+  tabMultiplier(openGal);
   Keyboard.write(KEY_RETURN);
   delay(5000);
-  tabMultiplier(1); //switch to 9 if different chromeOS versio
+  tabMultiplier(toPlay); // either 1 or 9 based on chromeOS version
   Keyboard.write(KEY_RETURN);
   delay(5000);
 }
@@ -97,16 +96,16 @@ void powerwashConfOld() {
 void networkSelect() {
   // begins setup and selects network
   Keyboard.write(KEY_RETURN);
-  delay(15000); //wait for SSID's to load
-  Keyboard.write(KEY_TAB); //pennfield_guest will appear on top
-  delay(1000);
+  delay(10000); //wait for SSID's to load
+  //Keyboard.write(KEY_TAB); //pennfield_guest will appear on top
+  //delay(1000);
   Keyboard.write(KEY_RETURN);
-  delay(8000); //wait for terms of service to load
+  delay(10000); //wait for terms of service to load
 }
 
-void acceptTerms() {
+void acceptTerms(int count) {
   //loop to click through terms of service and land on enter
-  tabMultiplier(98);
+  tabMultiplier(count); //0, 97, or 98
   Keyboard.write(KEY_RETURN);
   delay(5000); //wait for splash screen
 }
@@ -116,6 +115,11 @@ void finishPowerwash() {
   //machine will update, enroll, and stop at final page
   Keyboard.write(KEY_TAB);
   delay(1000);
+  Keyboard.write(KEY_RETURN);
+  //wait for enrollment and click through to sign-in page
+  delay(30000);
+  Keyboard.write(KEY_TAB);
+  delay(500);
   Keyboard.write(KEY_RETURN);
 }
 

@@ -1,5 +1,5 @@
 /**
- * Used for chromeOS version with simple gallery and thin window 
+ * Used for chromeOS version 89, with simple gallery and thin window 
  * with "Chromebooke managed..." message on login page.
  * 
  * Author: Ian Nostrant
@@ -22,11 +22,11 @@ void loop() {
   */
   
   //user ID
-  Keyboard.println("nostranti@pennfield.net");
+  Keyboard.println("username@user.com");
   delay(10000);
 
   //user password
-  Keyboard.println("Nost2235#");
+  Keyboard.println("password");
   delay(20000); //wait for pc to load
 
   //open crosh and run battery_test 1

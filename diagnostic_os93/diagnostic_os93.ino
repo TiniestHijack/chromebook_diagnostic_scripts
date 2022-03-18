@@ -1,5 +1,5 @@
 /**
- * Used for chromeOS version 88 and earlier with complex gallery and wide window 
+ * Used for chromeOS version 93 and earlier with complex gallery and wide window 
  * with "Chromebooks managed by..." message on login page.
  * 
  * Author: Ian Nostrant

@@ -1,5 +1,5 @@
 /**
- * Used for chromeOS version with sideways camera and thin window 
+ * Used for chromeOS version 90 with sideways camera and thin window 
  * without "Chromebooke managed..." message on login page.
  * 
  * Author: Ian Nostrant
@@ -22,11 +22,11 @@ void loop() {
   */
   
   //user ID
-  Keyboard.println("nostranti@pennfield.net");
+  Keyboard.println("username");
   delay(10000);
 
   //user password
-  Keyboard.println("Nost2235#");
+  Keyboard.println("password");
   delay(20000); //wait for pc to load
 
   //open crosh and run battery_test 1

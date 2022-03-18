@@ -22,7 +22,7 @@ void loop() {
   */
   
   //user ID
-  Keyboard.println("username@user.com");
+  Keyboard.println("username");
   delay(10000);
 
   //user password
